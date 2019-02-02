@@ -1,14 +1,12 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
-
-#create a view for /about
 def about (request):
 	#create a message
 	message_dict = {'boldmessage': "Rango says here is the about page"}
 	#return a rendered response
 	return render(request, 'rango/about.html', context = message_dict)
-	
+
 
 def index(request):
     # Construct a dictionary to pass to the template engine as its context.
@@ -19,6 +17,10 @@ def index(request):
     # Note that the first parameter is the template we wish to use.
     return render(request, 'rango/index.html', context=context_dict)
 
+
+
+	
+	
 
 
 
