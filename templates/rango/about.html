@@ -1,18 +1,22 @@
 <!DOCTYPE html>
+
+{% load staticfiles %} <!-- New line -->
+
 <html>
-	{% load staticfiles %}
-	
 	<head>
-		<title>About</title>
+		<title>Rango</title>
 	</head>
 
 	<body>
+		<h1>Rango says...</h1>
 		<div>
-			<strong>{{ boldmessage }}</strong>
+			<strong>{{ boldmessage }}</strong><br />
 		</div>
+
 		<div>
-			<a href="/rango/">Home</a><br />
+			<a href="/rango/">Index</a><br />
+			<img src="{{ MEDIA_URL}}cat.jpg"
+				alt="Picture of cat" /> <!-- New line -->
 		</div>
 	</body>
-
-</html>  
+</html>
